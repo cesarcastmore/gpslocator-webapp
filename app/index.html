@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<!-- build:css(.) styles/vendor.css -->
+	<!-- bower:css -->
+	<link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+	<link rel="stylesheet" href="bower_components/angular-material-sidenav-menu/material-menu-sidenav.min.css" />
+	<!-- endbower -->
+	<!-- endbuild -->
+	<!-- build:css(.tmp) styles/main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+
+	<!-- endbuild -->
+</head>
+
+<body ng-app="gpslocatorApp">
+	<!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+	<!-- Add your site or application content here -->
+	<style>
+		.toolbardemoBasicUsage md-toolbar md-icon.md-default-theme {
+			color: white;
+		}
+	</style>
+
+	<div ng-controller="MainCtrl">
+
+		<md-toolbar layout="row">
+			<div class="md-toolbar-tools">
+				<md-button class="md-icon-button" aria-label="Settings" ng-click="openLeftMenu()">
+					<md-icon md-svg-icon="images/list.svg"></md-icon>
+				</md-button>
+				<h2><span>GPS Locator</span></h2><span flex></span>
+				<md-button class="md-icon-button" aria-label="business" href="#/business/login">
+					<md-icon md-svg-icon="images/business.svg" style="color: greenyellow;"></md-icon>
+				</md-button>
+				<md-button class="md-icon-button" aria-label="client" href="#/client/login">
+					<md-icon md-svg-icon="images/person.svg"></md-icon>
+				</md-button>
+				<md-button class="md-icon-button" aria-label="More" ng-click="logout()">
+					<md-icon md-svg-icon="images/exit_to_app.svg"></md-icon>
+				</md-button>
+			</div>
+		</md-toolbar>
+
+		<md-sidenav md-component-id="left" class="md-sidenav-left">
+
+			<md-menu-sidenav>
+				<md-menu-sidenav-item>
+					<md-menu-sidenav-title>
+						<md-toogle-menu layout="row" flex>
+							<md-icon flex="15">face</md-icon>
+							<h1 class="md-body-2" flex>Mapa</h1>
+						</md-toogle-menu>
+
+						<md-icon flex="15">pause</md-icon>
+					</md-menu-sidenav-title>
+
+					<md-menu-sidenav-content>
+						<md-menu-sidenav-subitem>Item 1</md-menu-sidenav-subitem>
+						<md-menu-sidenav-subitem>Item 2</md-menu-sidenav-subitem>
+						<md-menu-sidenav-subitem>Item 3</md-menu-sidenav-subitem>
+					</md-menu-sidenav-content>
+				</md-menu-sidenav-item>
+
+				<md-divider></md-divider>
+
+				<md-menu-sidenav-item>
+					<md-menu-sidenav-title>
+						<md-toogle-menu layout="row" flex>
+							<md-icon flex="15">face</md-icon>
+							<h1 class="md-body-2" flex>Mapa</h1>
+							<md-icon flex="15">pause</md-icon>
+						</md-toogle-menu>
+
+					</md-menu-sidenav-title>
+
+					<md-menu-sidenav-content>
+						<md-menu-sidenav-subitem>Item 1</md-menu-sidenav-subitem>
+						<md-menu-sidenav-subitem>Item 2</md-menu-sidenav-subitem>
+						<md-menu-sidenav-subitem>Item 3</md-menu-sidenav-subitem>
+						<md-menu-sidenav-subitem>Item 4</md-menu-sidenav-subitem>
+					</md-menu-sidenav-content>
+				</md-menu-sidenav-item>
+			</md-menu-sidenav>
+
+		</md-sidenav>
+		<md-content ng-view></md-content>
+
+	</div>
+
+
+
+
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+	<script>
+		! function(A, n, g, u, l, a, r) {
+			A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
+					(A[l].q = A[l].q || []).push(arguments)
+				}, A[l].l = +new Date, a = n.createElement(g), r = n
+				.getElementsByTagName(g)[0], a.src = u, r.parentNode
+				.insertBefore(a, r)
+		}(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-XXXXX-X');
+		ga('send', 'pageview');
+	</script>
+
+	<!-- build:js(.) scripts/vendor.js -->
+	<!-- bower:js -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.js"></script>
+	<script src="bower_components/angular-aria/angular-aria.js"></script>
+	<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+	<script src="bower_components/angular-messages/angular-messages.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+	<script src="bower_components/angular-touch/angular-touch.js"></script>
+	<script src="bower_components/angular-material/angular-material.js"></script>
+	<script src="bower_components/angular-material-sidenav-menu/material-menu-sidenav.min.js"></script>
+	<script src="bower_components/a0-angular-storage/dist/angular-storage.js"></script>
+	<script src="bower_components/angular-jwt/dist/angular-jwt.js"></script>
+	<script src="bower_components/auth0-lock/build/auth0-lock.js"></script>
+	<script src="bower_components/auth0.js/build/auth0.js"></script>
+	<script src="bower_components/auth0-angular/build/auth0-angular.js"></script>
+	<!-- endbower -->
+	<!-- endbuild -->
+
+	<!-- build:js({.tmp,app}) scripts/scripts.js -->
+	<script src="scripts/app.js"></script>
+	<script src="scripts/controllers/main.js"></script>
+	<script src="scripts/controllers/about.js"></script>
+	<script src="scripts/controllers/business_add.js"></script>
+	<script src="scripts/controllers/client_add.js"></script>
+	<script src="scripts/controllers/client_login.js"></script>
+	<script src="scripts/controllers/business_login.js"></script>
+<script src="scripts/controllers/business_find.js"></script>
+	<!-- endbuild -->
+</body>
+
+</html>

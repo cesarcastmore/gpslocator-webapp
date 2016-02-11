@@ -1,0 +1,15 @@
+<!doctype html> <html> <head> <meta charset="utf-8"> <title></title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.43edff5f.css"> <link rel="stylesheet" href="styles/main.e4396564.css"> </head> <body ng-app="gpslocatorApp"> <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]--> <!-- Add your site or application content here --> <style>.toolbardemoBasicUsage md-toolbar md-icon.md-default-theme {
+	color: white;
+}</style> <div ng-controller="MainCtrl"> <md-content> <md-toolbar> <div class="md-toolbar-tools"> <md-button class="md-icon-button" aria-label="Settings" ng-click="openLeftMenu()"> <md-icon md-svg-icon="images/list.svg"></md-icon> </md-button> <h2> <span>GPS Locator</span> </h2> <span flex></span> <md-button class="md-icon-button" aria-label="business" href="#/business/login"> <md-icon md-svg-icon="images/business.svg" style="color: greenyellow"></md-icon> </md-button> <md-button class="md-icon-button" aria-label="client" href="#/client/login"> <md-icon md-svg-icon="images/person.svg"></md-icon> </md-button> <md-button class="md-icon-button" aria-label="More"> <md-icon md-svg-icon="images/exit_to_app.svg"></md-icon> </md-button> </div></md-toolbar> </md-content> </div>   <md-sidenav md-component-id="left" class="md-sidenav-left"> Left Nav! </md-sidenav> <md-content ng-view></md-content>  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <script>!function(A, n, g, u, l, a, r) {
+			A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
+				(A[l].q = A[l].q || []).push(arguments)
+			}, A[l].l = +new Date, a = n.createElement(g), r = n
+					.getElementsByTagName(g)[0], a.src = u, r.parentNode
+					.insertBefore(a, r)
+		}(window, document, 'script',
+				'https://www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-XXXXX-X');
+		ga('send', 'pageview');</script> <script src="scripts/vendor.efac90d0.js"></script> <script src="scripts/scripts.9c5e67d5.js"></script> </body> </html>

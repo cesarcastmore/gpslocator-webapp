@@ -1,0 +1,8 @@
+#Para instalar un nuevo modulo en el proyecto
+bower install angular-material --save
+
+#Crear un menu como  el de angular material
+http://stackoverflow.com/questions/28389671/create-a-menu-like-in-angularjs-material-website
+
+#Documentacion de yo angular
+https://github.com/yeoman/generator-angular
